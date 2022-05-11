@@ -49,6 +49,5 @@ void loop() {
   UDP.beginPacket(remote_IP, UDP_PORT); // Where the udp packet start
   UDP.write("hello"); // Write data or whatever to the packet
   UDP.endPacket(); // Where the udp packet end.
-  delay(1000);
-  
+  delay(50);
 }

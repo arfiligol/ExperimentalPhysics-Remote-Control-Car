@@ -48,9 +48,9 @@ void loop() {
     Serial.print("Received packet! Size: ");
     Serial.println(packetSize);
 
+    // Read the UDP packet into the packetBuffer (a container) with length UDP_TX_PACKET_MAX_SIZE.
     int len = UDP.read(packetBuffer, UDP_TX_PACKET_MAX_SIZE);
     Serial.println(packetBuffer);
 
   }
-  delay(1000);
 }
