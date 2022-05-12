@@ -1,6 +1,4 @@
 import serial
-import cv2
-
 
 COM_PORT = "COM4" # Select the port we are listen
 BAUD_RATES = 115200 # The baud rates we are using
