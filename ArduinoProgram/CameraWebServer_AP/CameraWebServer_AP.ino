@@ -20,8 +20,8 @@
 #include "camera_pins.h"
 
 // For WiFi configuration
-#define AP_SSID = "arfiligol";
-#define AP_PASS = "dragon25468";
+#define AP_SSID "arfiligol"
+#define AP_PASS "dragon25468"
 
 IPAddress local_IP(192,168,4,1); // Set the IP of the server
 IPAddress gateway(192,168,4,1); // Set up Gateway
