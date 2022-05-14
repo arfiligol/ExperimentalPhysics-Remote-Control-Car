@@ -1,14 +1,18 @@
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
+#include <Servo.h>
 
 // Set AP redentials
 #define AP_SSID "arfiligol"
 #define AP_PASS "dragon25468"
 
-#define pin_aa D3
-#define pin_ab D4
+#define pin_aa D4
+#define pin_ab D3
 #define pin_ba D5
 #define pin_bb D6
+
+#define ser_hor D8
+
 // UDP
 WiFiUDP UDP;
 IPAddress local_IP(192,168,4,1); // Set the IP of the server
