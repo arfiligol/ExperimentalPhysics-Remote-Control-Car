@@ -1,6 +1,6 @@
 import serial
 
-COM_PORT = "COM3" # Select the port we are listen
+COM_PORT = "/dev/cu.usbserial-14120" # Select the port we are listen
 BAUD_RATES = 115200 # The baud rates we are using
 ser = serial.Serial(COM_PORT, BAUD_RATES) # initialize the Serial port
 

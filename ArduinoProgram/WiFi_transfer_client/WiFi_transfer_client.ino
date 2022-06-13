@@ -3,11 +3,14 @@
 
 
 // Set WiFi credentials
-#define WIFI_SSID "arfiligol"
+#define WIFI_SSID "arfiligol2"
 #define WIFI_PASS "dragon25468"
 
 // UDP
 WiFiUDP UDP;
+IPAddress local_IP(192,168,4,2); // Set local IP
+IPAddress gateway(192,168,4,1);
+IPAddress subnet(255,255,255,0);
 IPAddress remote_IP(192, 168, 4, 1); // remote IP is the IP where we are going to send message to.
 #define UDP_PORT 4210
 
@@ -19,6 +22,7 @@ void setup() {
   Serial.println();
 
   // Begin WiFi
+  WiFi.config(local_IP, gateway, subnet); // Config the internet connection
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   WiFi.mode(WIFI_STA);
 
@@ -43,11 +47,13 @@ void setup() {
 
 }
 
+
 void loop() {
   // put your main code here, to run repeatedly:
   if (Serial.available()) {
     // Store the message from serial port
     char message = Serial.read();
+    
     Serial.println(message);
 
     // Send the message through UDP packet
